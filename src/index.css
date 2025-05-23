@@ -1,0 +1,303 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.psv-container {
+  background: #f3f4f6 !important;
+  border-radius: 0.5rem !important;
+}
+
+.psv-navbar {
+  background: rgba(0, 0, 0, 0.5) !important;
+  border-radius: 0.5rem !important;
+}
+
+.psv-button {
+  width: 20px !important;
+  height: 20px !important;
+  padding: 10px !important;
+}
+
+.psv-zoom-button {
+  width: 20px !important;
+  height: 20px !important;
+  padding: 10px !important;
+}
+
+/* Custom Hotspot Styles */
+.custom-hotspot {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  background: rgba(255, 255, 255, 0.8) !important;
+  border: 2px solid transparent !important;
+  transition: all 0.3s ease !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2) !important;
+}
+
+.custom-hotspot::before {
+  content: '' !important;
+  width: 12px !important;
+  height: 12px !important;
+  background: white !important;
+  border-radius: 50% !important;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3) !important;
+}
+
+.custom-hotspot:hover {
+  border-color: white !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  transform: scale(1.1) !important;
+}
+
+
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* Base hotspot style */
+.custom-hotspot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.custom-hotspot:hover {
+  transform: scale(1.2);
+}
+
+/* Navigation hotspot - blue */
+.hotspot-navigation {
+  background-color: rgba(59, 130, 246, 0.8);
+  border: 2px solid white;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+}
+
+.hotspot-navigation:hover {
+  background-color: #3b82f6;
+}
+
+/* Image hotspot - green */
+.hotspot-image {
+  background-color: rgba(16, 185, 129, 0.8);
+  border: 2px solid white;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.3);
+}
+
+.hotspot-image:hover {
+  background-color: #10b981;
+}
+
+/* Video hotspot - red */
+.hotspot-video {
+  background-color: rgba(239, 68, 68, 0.8);
+  border: 2px solid white;
+  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.3);
+}
+
+.hotspot-video:hover {
+  background-color: #ef4444;
+}
+
+/* Info hotspot - yellow */
+.hotspot-info {
+  background-color: rgba(245, 158, 11, 0.8);
+  border: 2px solid white;
+  box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.3);
+}
+
+.hotspot-info:hover {
+  background-color: #f59e0b;
+}
+
+/* Link hotspot - purple */
+.hotspot-link {
+  background-color: rgba(139, 92, 246, 0.8);
+  border: 2px solid white;
+  box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.3);
+}
+
+.hotspot-link:hover {
+  background-color: #8b5cf6;
+}
+
+/* Iframe hotspot - pink */
+.hotspot-iframe {
+  background-color: rgba(236, 72, 153, 0.8);
+  border: 2px solid white;
+  box-shadow: 0 0 0 2px rgba(236, 72, 153, 0.3);
+}
+
+.hotspot-iframe:hover {
+  background-color: #ec4899;
+}
+/* Add these accessibility styles to the end of the file */
+
+/* High contrast mode */
+.high-contrast-mode {
+  --bg-color: #000000;
+  --text-color: #ffffff;
+  --link-color: #ffff00;
+  --heading-color: #ffffff;
+  --border-color: #ffffff;
+  --button-bg: #ffffff;
+  --button-text: #000000;
+}
+
+.high-contrast-mode body,
+.high-contrast-mode .bg-white,
+.high-contrast-mode .bg-gray-50,
+.high-contrast-mode .bg-gray-100 {
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
+}
+
+.high-contrast-mode h1,
+.high-contrast-mode h2,
+.high-contrast-mode h3,
+.high-contrast-mode h4,
+.high-contrast-mode h5,
+.high-contrast-mode h6 {
+  color: var(--heading-color) !important;
+}
+
+.high-contrast-mode a {
+  color: var(--link-color) !important;
+}
+
+.high-contrast-mode button:not(.bg-blue-500) {
+  background-color: var(--button-bg) !important;
+  color: var(--button-text) !important;
+  border: 2px solid var(--border-color) !important;
+}
+
+.high-contrast-mode .border,
+.high-contrast-mode .border-l,
+.high-contrast-mode .border-r,
+.high-contrast-mode .border-t,
+.high-contrast-mode .border-b {
+  border-color: var(--border-color) !important;
+}
+
+/* Large font mode */
+.large-font-mode {
+  font-size: 120% !important;
+}
+
+.large-font-mode h1 {
+  font-size: 2.5rem !important;
+}
+
+.large-font-mode h2 {
+  font-size: 2rem !important;
+}
+
+.large-font-mode h3 {
+  font-size: 1.75rem !important;
+}
+
+.large-font-mode button,
+.large-font-mode input,
+.large-font-mode select,
+.large-font-mode textarea {
+  font-size: 1.1rem !important;
+}
+
+/* Easy language mode - this would typically involve loading alternative content */
+.easy-language-mode .complex-text {
+  display: none !important;
+}
+
+.easy-language-mode .simple-text {
+  display: block !important;
+}
+
+/* By default, hide simple text versions */
+.simple-text {
+  display: none;
+}
